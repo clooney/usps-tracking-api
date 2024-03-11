@@ -91,58 +91,9 @@ Create a tracking (Real-time tracking):
 
 Create trackings (Max. 40 tracking numbers create in one call):
 
-    using TrackingMoreAPI;
+      using TrackingMoreAPI;
       using TrackingMoreAPI.Model.Trackings;
-    
-      namespace Testing;
-      
-      public class Test
-      {
-      
-            static void Main(string[] args)
-            {
-              try
-              {
-                  GetTrackingResultsParams getTrackingResultsParams = new GetTrackingResultsParams();
 
-                  # Perform queries based on various conditions
-                  # getTrackingResultsParams.trackingNumbers = "92632903279511573030094832,92642903289511563030094932";
-                  getTrackingResultsParams.courierCode = "usps";
-                  getTrackingResultsParams.createdDateMin = "2023-08-23T06:00:00+00:00";
-                  getTrackingResultsParams.createdDateMax = "2023-09-05T07:20:42+00:00";
-                  var apiResponse = trackingMore.Tracking.GetTrackingResults(getTrackingResultsParams);
-                  Console.WriteLine(apiResponse.meta.code);
-                  foreach (var item in apiResponse.data)
-                  {
-                  Console.WriteLine("trackingNumber: " + item.trackingNumber);
-                  Console.WriteLine("courierCode: " + item.courierCode);
-                  
-                      Console.WriteLine();
-                  }
-              }
-              catch (TrackingMoreException ex)
-              {
-                  Console.WriteLine("Catch custom exceptions：" + ex.Message);
-              }
-              catch (TimeoutException ex)
-              {
-                  Console.WriteLine("Timeout Exception: "  + ex.Message);
-              }
-              catch (Exception ex)
-              {
-                  Console.WriteLine("Catch other exceptions:" + ex.Message);
-              }
-      
-            }
-      
-      }
-
-
-Get status of the shipment:
-
-    using TrackingMoreAPI;
-      using TrackingMoreAPI.Model.Trackings;
-    
       namespace Testing;
       
       public class Test
@@ -183,6 +134,55 @@ Get status of the shipment:
                   {
                       Console.WriteLine("trackingNumber: " + item.trackingNumber);
                       Console.WriteLine("courierCode: " + item.courierCode);
+                  
+                      Console.WriteLine();
+                  }
+              }
+              catch (TrackingMoreException ex)
+              {
+                  Console.WriteLine("Catch custom exceptions：" + ex.Message);
+              }
+              catch (TimeoutException ex)
+              {
+                  Console.WriteLine("Timeout Exception: "  + ex.Message);
+              }
+              catch (Exception ex)
+              {
+                  Console.WriteLine("Catch other exceptions:" + ex.Message);
+              }
+      
+            }
+      
+      }
+
+    
+Get status of the shipment:
+
+      using TrackingMoreAPI;
+      using TrackingMoreAPI.Model.Trackings;
+
+      namespace Testing;
+      
+      public class Test
+      {
+      
+            static void Main(string[] args)
+            {
+              try
+              {
+                  GetTrackingResultsParams getTrackingResultsParams = new GetTrackingResultsParams();
+
+                  # Perform queries based on various conditions
+                  # getTrackingResultsParams.trackingNumbers = "92632903279511573030094832,92642903289511563030094932";
+                  getTrackingResultsParams.courierCode = "usps";
+                  getTrackingResultsParams.createdDateMin = "2023-08-23T06:00:00+00:00";
+                  getTrackingResultsParams.createdDateMax = "2023-09-05T07:20:42+00:00";
+                  var apiResponse = trackingMore.Tracking.GetTrackingResults(getTrackingResultsParams);
+                  Console.WriteLine(apiResponse.meta.code);
+                  foreach (var item in apiResponse.data)
+                  {
+                  Console.WriteLine("trackingNumber: " + item.trackingNumber);
+                  Console.WriteLine("courierCode: " + item.courierCode);
                   
                       Console.WriteLine();
                   }
