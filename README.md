@@ -1,8 +1,12 @@
 # TrackingMore: USPS Tracking API
-TrackingMore provides a robust [shipment tracking API](https://www.trackingmore.com/tracking-api) across over 1,200 global carriers, such as USPS, UPS, FedEx, and DHL.
+[USPS Tracking API](https://www.trackingmore.com/usps-tracking-api.html) enables you to connect tracking info of USPS shipments into your system, improving shipment visibility. 
+
+Besides USPS, TrackingMore supports shipment tracking across 1,200+ global carriers through a robust [multi-carrier shipment tracking API](https://www.trackingmore.com/tracking-api).
+
+TrackingMore provides API compatibility with seven programming languages. Comprehensive documentation for setup and use is included within this repository to facilitate the integration process.
 
 ### Features
-   *  Unified real-time tracking information for various carriers.
+   *  Unified real-time tracking information for USPS shipments.
    *  Webhook support for automatic shipment status updates.
 
 ### Tracking Status Glossary
@@ -54,8 +58,6 @@ Code | Description
 511	| ServerError - Server error. Please contact us: service@trackingmore.org.
 512	| ServerError - Server error. Please contact us: service@trackingmore.org.
 513	| ServerError - Server error. Please contact us: service@trackingmore.org.
-
-For a seamless integration experience, the API provides compatibility with seven programming languages. Comprehensive documentation for setup and use is included within this repository to facilitate the integration process.
 
 
 
