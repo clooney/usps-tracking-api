@@ -3,7 +3,7 @@ The TrackingMore webhook delivers near real-time notifications for shipment stat
 
 How to Set Up the Webhook
 --------
-* Create your own webhook endpoint.
+* Create your own webhook URL.
 * Access [TrackingMore’s admin](https://www.trackingmore.com/signup.html).
 * Add webhook URL under developer setting (Max. 4 URLs per account).
 
