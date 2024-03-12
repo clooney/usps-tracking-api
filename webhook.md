@@ -21,7 +21,7 @@ TrackingMore's webhook utilizes the POST method to transmit event-driven data. F
 Each webhook notification includes a header with a digital signature. This signature, a base64-encoded HMAC, is generated using the sha256 algorithm with the webhook request body and your account's webhook secret.
 
 ### How to compute HMAC signature
-Step 1: Get the Webhook Secret.
+* Get the Webhook Secret.
 
 ~~~
 2e55b9a3-4dd1-4416-9897-c4bd1e3d738f
@@ -29,9 +29,7 @@ Step 1: Get the Webhook Secret.
 
 Note: Webhook Secret is only for V4 version Webhook.
 
-Step 2: Compute HMAC signature by using Sha256.
-
-The following is a Golang example.
+* Compute HMAC signature by using Sha256. The following is a Golang example.
 
 ~~~
 WEBHOOK_SECRET := "2e55b9a3-4dd1-4416-9897-c4bd1e3d738f"
@@ -46,6 +44,6 @@ func GenerateSignature(apiKey, timestamp string) string {
 // HMAC signature: a37084ab68ae16b77db1f8463f31be9fcc965e2515e03efecf8139bb1e511b06
 ~~~
 
-Step 3: Verify signature.
+* Verify signature.
 Compare the computed HMAC signature against the signature in the webhook's header for verification.
 
