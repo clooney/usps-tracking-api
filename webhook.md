@@ -44,6 +44,5 @@ func GenerateSignature(apiKey, timestamp string) string {
 // HMAC signature: a37084ab68ae16b77db1f8463f31be9fcc965e2515e03efecf8139bb1e511b06
 ~~~
 
-* Verify signature.
-Compare the computed HMAC signature against the signature in the webhook's header for verification.
+* Compare the computed HMAC signature against the signature in the webhook's header for verification.
 
