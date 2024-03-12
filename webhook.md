@@ -31,6 +31,9 @@ Step 1: Get Webhook Secret
 
 The following Webhook Secret is used for compute signature.
 
+~~~
+2e55b9a3-4dd1-4416-9897-c4bd1e3d738f
+~~~
 
 Note: Webhook Secret is only for V4 version Webhook.
 
@@ -38,7 +41,18 @@ Step 2: Compute HMAC signature by using Sha256
 
 The following Golang example demonstrates the computation of a webhook signature.
 
+~~~
+WEBHOOK_SECRET := "2e55b9a3-4dd1-4416-9897-c4bd1e3d738f"
+timestamp := "1662371528"
 
+func GenerateSignature(apiKey, timestamp string) string {
+	h := hmac.New(sha256.New, []byte(WEBHOOK_SECRET))
+	h.Write([]byte(timestamp))
+	return hex.EncodeToString(h.Sum(nil))
+}
+
+// HMAC signature: a37084ab68ae16b77db1f8463f31be9fcc965e2515e03efecf8139bb1e511b06
+~~~
 
 Step 3: Verify signature
 Compare the computed HMAC signature and the attached signature in header.
