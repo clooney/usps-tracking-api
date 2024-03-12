@@ -1,5 +1,5 @@
-# TrackingMore: Webhook
-The TrackingMore webhook delivers near real-time notifications for shipment status changes to a specified URL, allowing for customized status alerts. 
+# TrackingMore: Tracking Webhook
+The TrackingMore webhook delivers near real-time notifications for shipment status changes to a specified URL, allowing for customized status alerts. This service streamlines the monitoring process, ensuring immediate data response via your configured URL.
 
 ## Webhook Overview
 ### How to Set Up the Webhook
