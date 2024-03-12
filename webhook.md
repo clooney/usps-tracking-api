@@ -1,18 +1,18 @@
 # TrackingMore: Webhook
 The TrackingMore webhook delivers near real-time notifications for shipment status changes to a specified URL, allowing for customized status alerts. 
 
-How to setup the Webhook
+How to Set Up the Webhook
 --------
 * Create your own webhook endpoint.
 * Access TrackingMore’s admin.
-* Add webhook URL (Max. 4 URLs per account) under developer setting.
+* Add webhook URL under developer setting (Max. 4 URLs per account).
 
 
-Webhook secure
+Webhook Secure
 --------
 TrackingMore supports either HTTP or HTTPS urls, so you can have security by using an SSL-enabled url. But keep in mind that your endpoint is going to be wide-open on the internet.
 
-Retry Webhooks
+Retry Webhook
 --------
 TrackingMore sends event driven data to webhook URL via POST method. In case of an unsuccessful event (HTTP response code NOT between 200 and 299), TrackingMore attempts to deliver your webhooks for up to 14 times with an exponential back off.
 
