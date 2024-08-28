@@ -1,7 +1,7 @@
 # TrackingMore: USPS Tracking API & Webhook
 [USPS Tracking API](https://www.trackingmore.com/usps-tracking-api.html) enables you to connect tracking info of USPS shipments into your system, improving shipment visibility. 
 
-Besides [USPS tracking](https://www.trackingmore.com/usps-tracking.html), TrackingMore supports shipment tracking across 1,200+ global carriers through a robust [multi-carrier shipment tracking API](https://www.trackingmore.com/tracking-api).
+Besides [USPS Tracking](https://www.trackingmore.com/usps-tracking.html), TrackingMore supports shipment tracking across 1,200+ global carriers through a robust [multi-carrier shipment tracking API](https://www.trackingmore.com/tracking-api).
 
 TrackingMore provides API compatibility with seven programming languages. Comprehensive documentation for setup and use is included within this repository to facilitate the integration process.
 
